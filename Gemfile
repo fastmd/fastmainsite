@@ -43,9 +43,11 @@ end
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'i18n', '~> 0.8.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'autoprefixer-rails', '~> 6.0'
+gem 'popper_js', '~> 1.12', '>= 1.12.9'
+gem 'sass', '~> 3.5', '>= 3.5.2'
 gem 'bootstrap-sass', '3.3.6'
-gem 'bootstrap', '~> 4.0.0'
-gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.0'
 gem 'font-awesome-sass', '~> 5.0.6'
 
 group :development, :test do
