@@ -1,8 +1,8 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  "http://github.com/#{repo_name}.git"
 end
 
 
@@ -42,10 +42,11 @@ end
 
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'i18n', '~> 0.8.1'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap', '~> 4.0.0'
 gem 'autoprefixer-rails'
-gem 'will_paginate'
-gem 'will_paginate-bootstrap'
+gem 'font-awesome-sass', '~> 5.0.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
