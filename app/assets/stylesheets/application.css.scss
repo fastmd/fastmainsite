@@ -57,6 +57,9 @@
     }
   }
 
+.bg-grey {
+    background-color: #f6f6f6;
+}
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
