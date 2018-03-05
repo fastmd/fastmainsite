@@ -7,13 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
-  </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    		<%= render 'layouts/navbar' %>	
-		    <%= yield %>
-		    <%= render 'layouts/contact' %>
-    		<%= render 'layouts/footer' %>  
-
+    
 			<script>
 			$(document).ready(function(){
 			  // Add smooth scrolling to all links in navbar + footer link
@@ -51,7 +45,13 @@
 			    }
 			  });
 			});
-			</script>
+			</script>   
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    		<%= render 'layouts/navbar' %>	
+		    <%= yield %>
+		    <%= render 'layouts/contact' %>
+    		<%= render 'layouts/footer' %>  
 
   </body>
 </html>

@@ -40,6 +40,7 @@ $maincolor: $cyanaccent4;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 0px;
+  padding-bottom: 0px;
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -94,7 +95,12 @@ $maincolor: $cyanaccent4;
       background-repeat: no-rpeat;
       background-position: center;
       -webkit-background-size: cover; 
-      background-size: cover; 
+      background-size: cover;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor; 
   }
 
   /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -129,7 +135,6 @@ $maincolor: $cyanaccent4;
     font-style: normal;
 }
   
-
 .bg-grey {
     background-color: #f6f6f6;
 }
@@ -145,7 +150,7 @@ $maincolor: $cyanaccent4;
 }
 
 .menucontainer-fluid {
-    padding: 0px 40px;
+    padding: 5px 40px;
 }
 
 .carcontainer-fluid {

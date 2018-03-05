@@ -1,0 +1,81 @@
+<div  id="home" class="container-fluid carcontainer-fluid">
+<!-- Слайдер -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <!-- Активный индикатор-->	
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <!-- Неактивные индикаторы -->
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <!-- Слайды -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      	<a href="http://www.fast.md">
+        <%= image_tag "chris-liverani-552652-unsplash.jpg", alt: "WEB Hosting" %>
+        <div class="carousel-caption">
+          <h2>WEB Hosting</h2>
+          <p>Real prices</p>
+        </div>
+        </a>      
+      </div>
+
+      <div class="item">
+      	<a href="http://www.fast.md">
+        <%= image_tag "lewis-ngugi-186309-unsplash.jpg", alt: "VPS / VDS" %>
+        <div class="carousel-caption">
+          <h2>VPS / VDS</h2>
+          <p>Virtual server</p>
+        </div>
+        </a>      
+      </div>
+    
+    <div class="item">
+    	<a href="http://www.fast.md">
+        <%= image_tag "rafael-pol-474017-unsplash-1.jpg", alt: "Dedicated Server" %>
+        <div class="carousel-caption">
+          <h2>Dedicated Server</h2>
+          <p>Large posibilites, high availability and protection of your data</p>
+        </div>
+        </a>      
+      </div>
+    
+    <div class="item">
+    	<a href="http://www.fast.md">
+        <%= image_tag "anthony-garand-509726-unsplash.jpg", alt: "CLOUD" %>
+        <div class="carousel-caption">
+          <h2>CLOUD</h2>
+          <p>Suitable prices, high-performace and high-safety work</p>
+        </div>
+        </a>      
+      </div>    
+
+    <div class="item">
+    	<a href="http://www.fast.md">
+        <%= image_tag "maik-jonietz-535261-unsplash.jpg", alt: "Other services" %>
+        <div class="carousel-caption">
+          <h2>Other services for you</h2>
+          <p>Domains, your site's implementation and improving, SEO, etc. ... </p>
+        </div>
+        </a>      
+      </div>
+    </div>  
+
+    <!-- Left and right controls -->
+    <!-- Стрелки переключения слайдов -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+
