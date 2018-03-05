@@ -141,8 +141,9 @@ $maincolor: $cyanaccent4;
 
 .jumbotron { 
     background-color: $maincolor; 
-    color: #ffffff;
-    padding: 100px 25px;
+    /*color: #ffffff;*/
+    padding: 50px 25px;
+    color: inherit;
 }
 
 .container-fluid {

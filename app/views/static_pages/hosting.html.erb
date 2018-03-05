@@ -1,4 +1,62 @@
 <% provide(:title, "Hosting") %>
+<%= render 'static_pages/carousel' %>
+
+<div class="jumbotron text-center">
+  <h1>HOSTING</h1> 
+  <p>A web hosting service is a type of Internet hosting service that allows individuals and organizations to make their website accessible via the World Wide Web. Web hosts are companies that provide space on a server owned or leased for use by clients, as well as providing Internet connectivity, typically in a data center. Web hosts can also provide data center space and connectivity to the Internet for other servers located in their data center, called colocation, also known as Housing in Latin America or France.</p>
+  <%= link_to "Learn more...", "https://en.wikipedia.org/wiki/Web_hosting_service", :target => "_blank", :class => "btn btn-primary" %>
+</div>
+
+<!-- we provide panel begin -->
+<div id="services" class="container-fluid carcontainer-fluid text-center bg-grey">
+  <h2>SERVICES</h2>
+  <h4>What we provide for every payment plan</h4>
+  <br>
+  <div class="row  slideanim">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>Number of domains</h4>
+      <p>Unlimited</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>Traffic</h4>
+      <p>Unlimited</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-lock logo-small"></span>
+      <h4>Number of Data bases</h4>
+      <p>Unlimited</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Email</h4>
+      <p>Unlimited</p>
+    </div>    
+    </div>
+    <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>FTP Users</h4>
+      <p>Unlimited</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4>Backup</h4>
+      <p>Daily, customizable!</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-leaf logo-small"></span>
+      <h4>Installing of any popular CMS</h4>
+      <p>Free</p>
+    </div>
+  </div>
+</div>
+<!-- we provide panel end -->
+
+<!-- pricing panel begin -->
 <div id="hosting" class="container-fluid">
   <div class="text-center">
     <h2>Pricing for hosting</h2>
@@ -6,162 +64,50 @@
   </div>
   <!-- first row -->
   <div class="row slideanim">
+    <% (0..3).each do |i| %>
     <div class="col-sm-3">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1><%= @hosting0.name %></h1>
+          <h1><%= @hosting[i].name %></h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{@hosting[i].mprice_eur}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
+          <p>HDD <strong><%= "#{@hosting[i].hdd}" %></strong></p>
+          <p>SSL <strong>Free</strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
-    <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
+          <h3><%= "#{@hosting[i].yprice_mdl} / #{@hosting[i].yprice_eur}" %></h3>
+          <h4>per year</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
       </div> 
     </div>
-    <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div>
-   <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
+    <% end %> 
   </div>
     <!-- second row -->
   <div class="row slideanim">
+    <div class="col-sm-1"></div>
+    <% (4..6).each do |i| %>
     <div class="col-sm-3">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
-          <h1>Basic</h1>
+          <h1><%= @hosting[i].name %></h1>
         </div>
         <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
+          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{@hosting[i].mprice_eur}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
+          <p>HDD: <strong><%= "#{@hosting[i].hdd}" %></strong></p>
+          <p>SSL: <strong>Free</strong></p>
         </div>
         <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
-    <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
+          <h3><%= "#{@hosting[i].yprice_mdl} / #{@hosting[i].yprice_eur}" %></h3>
+          <h4>per year</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
       </div> 
     </div>
-    <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div>
-   <div class="col-sm-3">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div> 
-    </div> 
+    <% end %> 
   </div>
 </div>
+<!-- pricing panel end -->
 
 	
