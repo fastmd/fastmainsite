@@ -1,4 +1,4 @@
-<div  id="home" class="container-fluid carcontainer-fluid">
+<div id="home" class="container-fluid carcontainer-fluid">
 <!-- Слайдер -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
     <!-- Indicators -->
@@ -16,13 +16,13 @@
     <!-- Слайды -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-      	<a href="http://www.fast.md">
+      	<%= link_to "hosting" do %>
         <%= image_tag "chris-liverani-552652-unsplash.jpg", alt: "WEB Hosting" %>
         <div class="carousel-caption">
           <h2>WEB Hosting</h2>
           <p>Real prices</p>
         </div>
-        </a>      
+        <% end %>      
       </div>
 
       <div class="item">
