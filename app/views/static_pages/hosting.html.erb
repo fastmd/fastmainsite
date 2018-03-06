@@ -70,13 +70,13 @@
         <div class="panel-heading">
           <h1><%= @hosting[i].name %></h1>
         </div>
-        <div class="panel-body">
-          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{@hosting[i].mprice_eur}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
+        <div class="panel-body" >
+          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{number_to_currency(@hosting[i].mprice_eur,:unit=>'€',precision: 0)}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
           <p>HDD <strong><%= "#{@hosting[i].hdd}" %></strong></p>
           <p>SSL <strong>Free</strong></p>
         </div>
         <div class="panel-footer">
-          <h3><%= "#{@hosting[i].yprice_mdl} / #{@hosting[i].yprice_eur}" %></h3>
+          <h3><%= "#{@hosting[i].yprice_mdl} / #{number_to_currency(@hosting[i].yprice_eur,:unit=>'€',precision: 0)}" %></h3>
           <h4>per year</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
@@ -94,12 +94,13 @@
           <h1><%= @hosting[i].name %></h1>
         </div>
         <div class="panel-body">
-          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{@hosting[i].mprice_eur}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
+          <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{number_to_currency(@hosting[i].mprice_eur,:unit=>'€',precision: 0)}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>
           <p>HDD: <strong><%= "#{@hosting[i].hdd}" %></strong></p>
+          <p><%= "#{@hosting[i].comment ? @hosting[i].comment : '.'} " %> </p>
           <p>SSL: <strong>Free</strong></p>
         </div>
         <div class="panel-footer">
-          <h3><%= "#{@hosting[i].yprice_mdl} / #{@hosting[i].yprice_eur}" %></h3>
+          <h3><%= "#{@hosting[i].yprice_mdl} / #{number_to_currency(@hosting[i].yprice_eur,:unit=>'€',precision: 0)}" %></h3>
           <h4>per year</h4>
           <button class="btn btn-lg">Sign Up</button>
         </div>
