@@ -162,7 +162,7 @@ $maincolor: $cyanaccent4;
     border-radius: 0;
 }
 
-/* Add an orange color to all icons and set the font-size */
+/* Add a color to all icons and set the font-size */
 .logo-small {
     color: $maincolor;
     font-size: 50px;
@@ -197,6 +197,7 @@ $maincolor: $cyanaccent4;
     border: 1px solid $maincolor; 
     border-radius:0;
     transition: box-shadow 0.5s;
+    height: 100%;
 }
 
 .panel:hover {
@@ -237,6 +238,10 @@ $maincolor: $cyanaccent4;
     margin: 15px 0;
     background-color: $maincolor;
     color: #fff;
+}
+
+.h100 {
+height: 100%;
 }
 /*pricing end*/
 
