@@ -73,9 +73,10 @@
   	<div class="col">
     <% (0..3).each do |i| %>
     <div class="col-sm-12 col-md-3 col-lg-3">
-      <div class="panel panel-default text-center">
+      <div class="panel <%= @hosting[i].flag ? "panel-prep" : "" %> text-center">
         <div class="panel-heading">
           <h1><%= @hosting[i].name %></h1>
+          <div class="blink"><h4><%= @hosting[i].flag ? "popular" : "" %></h4></div>
         </div>
         <div class="panel-body" >
           <p><% if !@hosting[i].mprice_eur.nil? then %>Per month: <strong><%= "#{@hosting[i].mprice_mdl} / #{number_to_currency(@hosting[i].mprice_eur,:unit=>'€',precision: 0)}" %></strong><% else %><%= @hosting[i].mprice_mdl %><% end %></p>

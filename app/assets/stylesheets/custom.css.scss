@@ -176,6 +176,7 @@ $maincolor: $cyanaccent4;
 .logo {
     color: $maincolor;
     font-size: 200px;
+    vertical-align: middle;
 }
 
 @media screen and (max-width: 768px) {
@@ -198,6 +199,11 @@ $maincolor: $cyanaccent4;
 }
 
 /*pricing begin*/
+.panel-prep {
+     border: 5px solid $maincolor !important;
+     transition: box-shadow 1.5s;
+}
+
 .panel {
     border: 1px solid $maincolor; 
     border-radius:0;
@@ -249,4 +255,14 @@ $maincolor: $cyanaccent4;
 height: 100%;
 }
 /*pricing end*/
+
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 
