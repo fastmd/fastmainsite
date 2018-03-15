@@ -1,7 +1,7 @@
 <% provide(:title, "Hosting") %>
 <%= render 'static_pages/carousel' %>
 
-<div id="hosting" class="container-fluid carcontainer-fluid text-center bg-grey">
+<div id="hosting" class="container text-center">
 <div class="jumbotron text-center">
   <h1>HOSTING</h1> 
   <p>A web hosting service is a type of Internet hosting service that allows individuals and organizations to make their website accessible via the World Wide Web. Web hosts are companies that provide space on a server owned or leased for use by clients, as well as providing Internet connectivity, typically in a data center. Web hosts can also provide data center space and connectivity to the Internet for other servers located in their data center, called colocation, also known as Housing in Latin America or France.</p>
@@ -10,7 +10,7 @@
 </div> 
 
 <!-- we provide panel begin -->
-<div id="services" class="container-fluid carcontainer-fluid text-center bg-grey">
+<div id="services" class="container text-center bg-grey">
   <h2>SERVICES</h2>
   <h4>What we provide for <strong><mark>every</mark></strong> payment plan</h4>
   <br>
@@ -63,7 +63,7 @@
 <!-- we provide panel end -->
 
 <!-- pricing panel begin -->
-<div id="hosting" class="container-fluid">
+<div id="pricing" class="container text-center">
   <div class="text-center">
     <h2>Pricing for hosting</h2>
     <h4>Choose a payment plan that works for you</h4>
@@ -72,7 +72,7 @@
   <div class="row slideanim">
   	<div class="col">
     <% (0..3).each do |i| %>
-    <div class="col-sm-3">
+    <div class="col-sm-12 col-md-3 col-lg-3">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1><%= @hosting[i].name %></h1>
@@ -95,9 +95,8 @@
     <!-- second row -->
   <div class="row slideanim">
   	<div class="col">
-    <div class="col-sm-1"></div>
     <% (4..6).each do |i| %>
-    <div class="col-sm-3">
+    <div class="col-sm-12 col-md-4 col-lg-4">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1><%= @hosting[i].name %></h1>
