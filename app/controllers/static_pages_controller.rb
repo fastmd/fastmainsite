@@ -1,6 +1,11 @@
 class StaticPagesController < ApplicationController
   
   def home
+    @service = Array.new
+    @service[0] = Service.new("0", "Hosting", "100 MDL", "5", "HDD from 400 Mb")
+    @service[1] = Service.new("0", "VPS", "1000 MDL", "50", "HDD from 20 Gb")
+    @service[2] = Service.new("0", "Cloud", "", "15", "HDD from 100 Gb")
+    @service[3] = Service.new("0", "Dedicated", "", "500", "HDD 2 x 300 Gb")      
   end
 
   def help
@@ -23,10 +28,39 @@ class StaticPagesController < ApplicationController
     @hosting[6] = Hosting.new("6", "BUSINESS EXTRA", "160 MDL", "8", "1200 MDL", "60","40 Gb", "+ 10 Gb: 1€ per month / 10€ per year")
   end  
   
-private  
+private 
+
+  class Service
+   def initialize(id, name, price_mdl, price_eur, feacher, comment = nil, flag = nil)
+      @id = id
+      @name = name
+      @price_mdl = price_mdl
+      @price_eur = price_eur
+      @feacher = feacher
+      @comment = comment
+      @flag = flag
+   end
+   def name
+     @name
+   end
+   def price_mdl
+     @price_mdl
+   end
+   def price_eur
+     @price_eur
+   end
+   def feacher
+     @feacher
+   end
+   def comment
+     @comment
+   end
+   def flag
+     @flag
+   end    
+  end 
   
   class Hosting
-   @@no_of_hosting = 0
    def initialize(id, name, mprice_mdl, mprice_eur, yprice_mdl, yprice_eur, hdd, comment = nil, flag = nil)
       @id = id
       @name = name
