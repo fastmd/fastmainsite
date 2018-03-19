@@ -2,10 +2,10 @@ class StaticPagesController < ApplicationController
   
   def home
     @service = Array.new
-    @service[0] = Service.new("0", "Hosting", "100 MDL", "5", "HDD from 400 Mb")
-    @service[1] = Service.new("0", "VPS", "1000 MDL", "50", "HDD from 20 Gb")
-    @service[2] = Service.new("0", "Cloud", "", "15", "HDD from 100 Gb")
-    @service[3] = Service.new("0", "Dedicated", "", "500", "HDD 2 x 300 Gb")      
+    @service[0] = Service.new("0", "Hosting", "100 MDL", "5", "HDD from 400 Mb", "archive")
+    @service[1] = Service.new("0", "VPS", "1000 MDL", "50", "HDD from 20 Gb", "hdd")
+    @service[2] = Service.new("0", "Cloud", nil, "15", "HDD from 100 Gb", "cloud")
+    @service[3] = Service.new("0", "Dedicated", nil, "500", "HDD 2 x 300 Gb", "server")      
   end
 
   def help
@@ -31,7 +31,7 @@ class StaticPagesController < ApplicationController
 private 
 
   class Service
-   def initialize(id, name, price_mdl, price_eur, feacher, comment = nil, flag = nil)
+   def initialize(id, name, price_mdl, price_eur, feacher, icon = nil, comment = nil, flag = nil)
       @id = id
       @name = name
       @price_mdl = price_mdl
@@ -39,6 +39,7 @@ private
       @feacher = feacher
       @comment = comment
       @flag = flag
+      @icon = icon
    end
    def name
      @name
@@ -57,7 +58,10 @@ private
    end
    def flag
      @flag
-   end    
+   end
+   def icon
+     @icon
+   end
   end 
   
   class Hosting

@@ -14,7 +14,10 @@ module Fast
     config.assets.enabled = true  
     config.assets.paths << "#{Rails.root}/app/assets/fonts" 
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
-    #config.autoload_paths << "#{Rails.root}/app/reports" 
-    config.i18n.default_locale = :ru      
+    #config.autoload_paths << "#{Rails.root}/app/reports"
+    # Белый список локалей, доступных приложению
+    I18n.available_locales = [:en, :ru, :ro]
+    # устанавливаем локаль по умолчанию на что-либо другое, чем :en
+    config.i18n.default_locale = :ru     
   end
 end

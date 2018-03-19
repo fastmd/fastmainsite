@@ -11,6 +11,7 @@
       <div class="panel panel-default text-center">
         <div class="panel-heading">
           <h1><%= @service[i].name %></h1>
+          <h1><%= icon('fas', @service[i].icon, class: 'strong medAq') %></h1>
         </div>
         <div class="panel-body">
           <p><%= "#{@service[i].feacher}" %></p>
@@ -21,7 +22,7 @@
         </div>
         <div class="panel-footer">
           <h2><small>from </small></h2>
-          <h3><%= "#{@service[i].price_mdl} / #{number_to_currency(@service[i].price_eur,:unit=>'€',precision: 0)}" %></h3>
+          <h3><%= ((!@service[i].price_mdl.nil?) ? ("#{@service[i].price_mdl} / ") : ("")) + ("#{number_to_currency(@service[i].price_eur,:unit=>'€',precision: 0)}") %></h3>
           <h4>per year</h4>
           <button class="btn btn-lg">Learn more...</button>
         </div>
